@@ -26,6 +26,6 @@ class RepositoryModule {
     @Named("secret_key")
     @Singleton
     @Provides
-    fun provideSecretKey() = "AIzaSyDifp_DN6l1CoiGBeGuMxMYmBxMxxQRsgE"
+    fun provideSecretKey() = "ENTER_YOUR_KEY"
 
 }
