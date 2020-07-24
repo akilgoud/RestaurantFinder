@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="searchViewStyle">
+            @style/Widget.AppCompat.SearchView
+        </item>
+        <item name="android:dropDownItemStyle">
+            @style/Widget.AppCompat.DropDownItem.Spinner
+        </item>
+        <item name="android:queryBackground">
+            @color/white
+        </item>
+        <item name="textAppearanceSearchResultTitle">
+            @style/TextAppearance.AppCompat.SearchResult.Title
+        </item>
+    </style>
+</resources>

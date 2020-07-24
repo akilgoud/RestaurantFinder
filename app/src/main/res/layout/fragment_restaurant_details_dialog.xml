@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="details"
+            type="com.cloudfull.restaraunts.model.data.entities.RestaurantDetails" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_sheet_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="150dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:drawableStart="@drawable/ic_restaurant_24px"
+            android:drawableLeft="@drawable/ic_restaurant_24px"
+            android:drawablePadding="16dp"
+            android:padding="12dp"
+            android:text="Contact Restaurant"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/callTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:autoLink="phone"
+            android:clickable="true"
+            android:drawableStart="@drawable/ic_local_phone_black_18dp"
+            android:drawableLeft="@drawable/ic_local_phone_black_18dp"
+            android:drawablePadding="8dp"
+            android:focusable="true"
+            android:gravity="start"
+            android:text="@{details.formattedPhoneNumber}"
+            android:textAlignment="center"
+            android:textColor="@color/primaryText"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            tools:ignore="RtlCompat" />
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/divider"
+            app:layout_constraintTop_toBottomOf="@+id/callTextView" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:autoLink="web"
+            android:drawableStart="@drawable/ic_launch_24px"
+            android:drawableLeft="@drawable/ic_launch_24px"
+            android:drawablePadding="8dp"
+            android:gravity="start"
+            android:text="@{details.website}"
+            android:textAlignment="center"
+            android:textColor="@color/primaryText"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/separator"
+            tools:ignore="RtlCompat" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

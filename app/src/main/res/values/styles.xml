@@ -1,0 +1,36 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppBottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_shape</item>
+    </style>
+
+    <style name="Theme.MyTheme" parent="Theme.AppCompat">
+        <item name="searchViewStyle">@style/SearchViewStyle</item>
+    </style>
+
+    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="searchViewStyle">
+            @style/Widget.AppCompat.SearchView
+        </item>
+        <item name="android:dropDownItemStyle">
+            @style/Widget.AppCompat.DropDownItem.Spinner
+        </item>
+        <item name="android:queryBackground">
+            @color/white
+        </item>
+        <item name="textAppearanceSearchResultTitle">
+            @style/TextAppearance.AppCompat.SearchResult.Title
+        </item>
+    </style>
+</resources>
